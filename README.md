@@ -18,32 +18,122 @@
 - **AI Voice Calls** — Make and receive phone calls with AI-generated transcripts and summaries
 - **Contact Management** — Organize and manage your contacts
 - **Task Tracking** — Create, assign, and track tasks
-- **MCP Server** — Integrate with Claude Desktop, Claude Code, and Cursor
+- **MCP Server** — Integrate with Claude Desktop, Claude Code, Cursor, and more
 
 ## MCP Server
 
 The [`@telitask/mcp-server`](https://www.npmjs.com/package/@telitask/mcp-server) package lets you manage contacts, tasks, and calls directly from your AI assistant.
 
-### Quick Start
+### Prerequisites
 
-1. **Authenticate:**
+- Node.js 18+
+- A [TeliTask](https://telitask.io) account
 
-   ```bash
-   npx @telitask/mcp-server login
-   ```
+### Step 1: Authenticate
 
-2. **Add to your MCP config** (Claude Desktop, Claude Code, or Cursor):
+```bash
+npx @telitask/mcp-server login
+```
 
-   ```json
-   {
-     "mcpServers": {
-       "telitask": {
-         "command": "npx",
-         "args": ["-y", "@telitask/mcp-server"]
-       }
-     }
-   }
-   ```
+This opens your browser to sign in and authorize the MCP server.
+
+### Step 2: Connect Your Client
+
+<details>
+<summary><strong>Claude Desktop</strong></summary>
+
+Add to your `claude_desktop_config.json`:
+
+- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "telitask": {
+      "command": "npx",
+      "args": ["-y", "@telitask/mcp-server"]
+    }
+  }
+}
+```
+
+Restart Claude Desktop after saving.
+
+</details>
+
+<details>
+<summary><strong>Claude Code</strong></summary>
+
+```bash
+claude mcp add telitask -- npx -y @telitask/mcp-server
+```
+
+</details>
+
+<details>
+<summary><strong>Cursor</strong></summary>
+
+Add to `.cursor/mcp.json` in your project or globally:
+
+```json
+{
+  "mcpServers": {
+    "telitask": {
+      "command": "npx",
+      "args": ["-y", "@telitask/mcp-server"]
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+<summary><strong>VS Code (Copilot)</strong></summary>
+
+1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
+2. Run **MCP: Add Server**
+3. Select **Command (stdio)**
+4. Enter command: `npx -y @telitask/mcp-server`
+5. Name it `telitask`
+
+Or add manually to `.vscode/settings.json`:
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "telitask": {
+        "command": "npx",
+        "args": ["-y", "@telitask/mcp-server"]
+      }
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+<summary><strong>Windsurf</strong></summary>
+
+Add to your `mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "telitask": {
+      "command": "npx",
+      "args": ["-y", "@telitask/mcp-server"]
+    }
+  }
+}
+```
+
+</details>
+
+> **Note:** Don't see your client? Most MCP-compatible tools use the same config format. Check your client's MCP documentation and use the config above.
 
 ### Available Tools
 
