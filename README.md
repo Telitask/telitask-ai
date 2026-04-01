@@ -5,6 +5,10 @@
 <p align="center">AI-powered phone calls, task management, and contact organization</p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/@telitask/mcp-server"><img src="https://img.shields.io/npm/v/@telitask/mcp-server?label=MCP%20Server&color=blue" alt="npm version" /></a>
+</p>
+
+<p align="center">
   <a href="https://telitask.ai">Website</a> ·
   <a href="#mcp-server">MCP Server</a> ·
   <a href="https://github.com/Telitask/telitask-ai/issues">Report Bug</a> ·
