@@ -5,7 +5,7 @@
 <p align="center">AI-powered phone calls, task management, and contact organization</p>
 
 <p align="center">
-  <a href="https://telitask.io">Website</a> ·
+  <a href="https://telitask.ai">Website</a> ·
   <a href="#mcp-server">MCP Server</a> ·
   <a href="https://github.com/Telitask/telitask-ai/issues">Report Bug</a> ·
   <a href="https://github.com/Telitask/telitask-ai/discussions">Discussions</a>
@@ -27,7 +27,7 @@ The [`@telitask/mcp-server`](https://www.npmjs.com/package/@telitask/mcp-server)
 ### Prerequisites
 
 - Node.js 18+
-- A [TeliTask](https://telitask.io) account
+- A [TeliTask](https://telitask.ai) account
 
 ### Step 1: Authenticate
 
