@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://telitask.ai">Website</a> ·
-  <a href="#mcp-server">MCP Server</a> ·
+  <a href="https://www.npmjs.com/package/@telitask/mcp-server">npm</a> ·
   <a href="https://github.com/Telitask/telitask-ai/issues">Report Bug</a> ·
   <a href="https://github.com/Telitask/telitask-ai/discussions">Discussions</a>
 </p>
@@ -154,6 +154,8 @@ Add to your `mcp_config.json`:
 | `list_tasks` | List your tasks |
 | `create_task` | Create a new task |
 | `update_task` | Update an existing task |
+| `send_phone_code` | Send a verification code to a phone number |
+| `verify_phone_code` | Verify a phone number with a 6-digit code |
 
 ## Changelog
 
